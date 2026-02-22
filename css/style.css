@@ -1,3 +1,40 @@
+* {
+    font-family: var(--font-main);
+    font-weight: 400;
+}
+
+body {
+    background: var(--color-bg);
+}
+
+.progress-section {
+    position: relative;
+    height: 320px;
+    width: 568px;
+    padding: 20px;
+    background: var(--color-card);
+}
+
+.title {
+    position: absolute;
+    margin-top: 5px;
+    font-size: 18px;
+}
+
+.progress {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 90px;
+}
+
+#progress-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @keyframes rotate {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
@@ -6,4 +43,73 @@
 .progress-animated {
     animation: rotate 3s linear infinite;
     transform-origin: center;
+}
+
+.progress-settings {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.progress-settings > div {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+#value-input {
+    box-sizing: border-box;
+    padding: 0;
+    width: 52px;
+    height: 35px;
+    border-radius: 18px;
+    border: 2px solid;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    outline: none;
+    background: transparent;
+    -moz-appearance: textfield;
+}
+
+#value-input::-webkit-inner-spin-button,
+#value-input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.toggle {
+    appearance: none;
+    margin: 0;
+    width: 52px;
+    height: 35px;
+    border-radius: 18px;
+    background: var(--color-toggle-bg);
+    position: relative;
+    transition: background 0.3s;
+}
+
+.toggle::before {
+    content: '';
+    position: absolute;
+    width: 29px;
+    height: 29px;
+    border-radius: 50%;
+    background: var(--color-card);
+    top: 3px;
+    left: 3px;
+    transition: transform 0.3s;
+}
+
+.toggle:checked {
+    background: var(--color-primary);
+}
+
+.toggle:checked::before {
+    transform: translateX(17px);
+}
+
+.progress-settings-text {
+    margin: 0;
+    font-size: 20px;
 }

@@ -1,0 +1,17 @@
+:root {
+    --color-bg: #eef3f6;
+    --color-card: #fefefe;
+    --color-primary: #005cfe;
+    --color-track: #eef3f6;
+    --color-toggle-bg: #dee6ef;
+    --color-text: #333;
+    --font-main: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.progress-track {
+    stroke: var(--color-track);
+}
+
+.progress-primary {
+    stroke: var(--color-primary);
+}

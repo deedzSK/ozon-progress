@@ -4,9 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Progress</title>
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div class="progress-section">
+        <div>
+            <h1 class="title">Progress</h1>
+        </div>
+        <div class="progress">
+            <div id="progress-container"></div>
+            <div class="progress-settings">
+                <div>
+                    <input type="number" id="value-input" value="0" min="0" max="100">
+                    <p class="progress-settings-text">Value</p>
+                </div>
+                <div>
+                    <input type="checkbox" id="animate-toggle" class="toggle">
+                    <p class="progress-settings-text">Animate</p>
+                </div>
+                <div>
+                    <input type="checkbox" id="hide-toggle" class="toggle">
+                    <p class="progress-settings-text">Hide</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="js/Progress.js"></script>
     <script src="js/app.js"></script>
 </body>
